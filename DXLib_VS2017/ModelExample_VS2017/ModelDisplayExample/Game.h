@@ -15,6 +15,8 @@ public:
 	void Update();
 	// •`‰æ
 	void Draw();
+	// I—¹
+	void End();
 };
 
 #endif // !GAME_H?

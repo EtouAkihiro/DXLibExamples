@@ -43,7 +43,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		ScreenFlip();
 	}
 
-	WaitKey();
+	// ゲームクラスの終了
+	game.End();
 
 	DxLib_End();
 

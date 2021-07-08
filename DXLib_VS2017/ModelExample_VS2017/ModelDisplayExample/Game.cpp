@@ -14,3 +14,8 @@ void Game::Update()
 void Game::Draw()
 {
 }
+
+// èIóπ
+void Game::End()
+{
+}
