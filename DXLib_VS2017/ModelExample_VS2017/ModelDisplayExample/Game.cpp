@@ -1,7 +1,7 @@
 #include "Game.h"
 
-// ‰Šú‰»
-void Game::Init()
+// ŠJn
+void Game::Start()
 {
 }
 

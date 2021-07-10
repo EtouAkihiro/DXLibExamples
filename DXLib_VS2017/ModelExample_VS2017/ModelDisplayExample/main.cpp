@@ -28,7 +28,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	game.Init();
 
 	// メインループ
-	while (true)
+	while (ProcessMessage() == 0)
 	{
 		// 画面に書かれているものを全て消す
 		ClearDrawScreen();

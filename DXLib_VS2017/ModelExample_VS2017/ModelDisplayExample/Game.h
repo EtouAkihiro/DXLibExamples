@@ -9,8 +9,8 @@ public:
 	// デストラクタ
 	~Game() = default;
 
-	// 初期化
-	void Init();
+	// 開始
+	void Start();
 	// 更新
 	void Update();
 	// 描画
