@@ -25,7 +25,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	Game game;
 
 	// ゲームクラスの初期化
-	game.Init();
+	game.Start();
 
 	// メインループ
 	while (ProcessMessage() == 0)

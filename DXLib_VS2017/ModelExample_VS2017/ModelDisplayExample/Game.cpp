@@ -1,8 +1,11 @@
+#include "DxLib.h"
 #include "Game.h"
+#include "Model.h"
 
 // 開始
 void Game::Start()
 {
+	Model::Load();
 }
 
 // 更新
