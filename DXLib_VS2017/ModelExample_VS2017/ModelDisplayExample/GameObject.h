@@ -1,9 +1,8 @@
 #ifndef GAME_OBJECT_H_
 #define GAME_OBJECT_H_
 
+#include "DxLib.h"
 #include <string>
-
-#include "Vector3.h"
 
 // ゲームオブジェクトクラス（基底クラス）
 class GameObject
@@ -38,7 +37,11 @@ protected:
 	// 名前
 	std::string m_Name;
 	// 位置
-	Vector3 m_Position;
+	VECTOR m_Position;
+	// 回転
+	VECTOR m_Rotation;
+	// 大きさ
+	VECTOR m_Scale;
 	// 死亡フラグ
 	bool m_Dead{ false };
 };
