@@ -1,18 +1,13 @@
 #ifndef TRANSFORM_H_
 #define TRANSFORM_H_
 
+#include <list>
+
 #include "DxLib.h"
 
 // トランスフォームクラス
 class Transform
 {
-private:
-	enum 
-	{
-		Local,  // ローカル
-		world,  // ワールド
-	};
-
 public:
 	// デフォルトコンストラクタ
 	Transform() = default;
@@ -20,56 +15,60 @@ public:
 	~Transform();
 
 	// ワールド座標を設定
-	void SetPosition(VECTOR position);
+	void Position(VECTOR position);
 	// ワールド座標を取得
-	VECTOR GetPosition() const;
+	VECTOR Position() const;
 
 	// ローカル座標を設定
-	void SetLocalPosition(VECTOR localPosition);
+	void LocalPosition(VECTOR localPosition);
 	// ローカル座標を取得
-	VECTOR GetLocalPosition() const;
+	VECTOR LocalPosition() const;
 
 	// ワールドの回転を設定
-	void SetRotation(VECTOR rotation);
+	void Rotation(VECTOR rotation);
 	// ワールドの回転を取得
-	VECTOR GetRotation() const;
+	VECTOR Rotation() const;
 
 	// ローカルの回転を設定
-	void SetLocalRotation(VECTOR localRotation);
+	void LocalRotation(VECTOR localRotation);
 	// ローカルの回転を取得
-	VECTOR GetLocalRotation() const;
+	VECTOR LocalRotation() const;
 
 	// ワールドのスケール値を設定
-	void SetScale(VECTOR scale);
+	void Scale(VECTOR scale);
 	// ワールドのスケール値を取得
-	VECTOR GetScale() const;
+	VECTOR Scale() const;
 
 	// ローカルのスケール値を設定
-	void SetLocalScale(VECTOR localScale);
+	void LocalScale(VECTOR localScale);
 	// ローカルのスケール値を取得
-	VECTOR GetLocalScale() const;
+	VECTOR LocalScale() const;
 
 	// 前向き方向を設定
-	void SetForward(VECTOR forward);
+	void Forward(VECTOR forward);
 	// 前向き方向を取得
-	VECTOR GetForward() const;
+	VECTOR Forward() const;
 
 	// 右向き方向を設定
-	void SetRight(VECTOR right);
+	void Right(VECTOR right);
 	// 右向き方向を取得
-	VECTOR GetRight() const;
+	VECTOR Right() const;
 
 	// 上向き方向を設定
-	void SetUp(VECTOR up);
+	void Up(VECTOR up);
 	// 上向き方向を取得
-	VECTOR GetUp() const;
+	VECTOR Up() const;
 
-	// オブジェクト方向を見る。
+	
 	void LookAt(Transform target, VECTOR worldUp);
 	void LookAt(Transform target);
-	// 移動方向を見る。
 	void LookAt(VECTOR worldPosition, VECTOR worldUp);
 	void LookAt(VECTOR worldPosition);
+
+	// 親の設定
+	void SetParent(Transform* parent, bool world_position_stays);
+	// 親を削除
+	void detachParent();
 
 private:
 	// 座標(ワールド座標)
@@ -84,6 +83,12 @@ private:
 	VECTOR local_rotation{ 0.0f,0.0,0.0f };
 	// スケール値(ローカル座標)
 	VECTOR local_scale{ 0.0f,0.0f,0.0f };
+
+	// 親クラス
+	Transform* parent = nullptr;
+
+	// 子クラス
+	std::list<Transform*> childs;
 };
 
 #endif // !TRANSFORM_H?
