@@ -1,13 +1,14 @@
 #include "DxLib.h"
 #include "Game.h"
+#include "Screen.h"
 
 // メイン関数
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) 
 {
 	// 画面モードの設定
-	SetGraphMode(640, 320, 32);
+	SetGraphMode(Screen::Width, Screen::Height, 32);
 	// ウィンドウサイズの設定
-	SetWindowSize(640, 320);
+	SetWindowSize(Screen::Width, Screen::Height);
 	// フルスクリーン表示かウィンドウ表示か
 	ChangeWindowMode(TRUE);
 	// マウスカーソルの表示(TRUE)・非表示(FALSE)

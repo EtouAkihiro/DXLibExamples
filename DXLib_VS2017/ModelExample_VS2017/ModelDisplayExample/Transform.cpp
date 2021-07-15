@@ -85,6 +85,7 @@ void Transform::Forward(VECTOR forward)
 // ‘OŒü‚«•ûŒü‚ðŽæ“¾
 VECTOR Transform::Forward() const
 {
+	return VECTOR();
 }
 
 void Transform::Right(VECTOR right)
