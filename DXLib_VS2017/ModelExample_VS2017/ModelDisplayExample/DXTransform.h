@@ -6,13 +6,13 @@
 #include "DxLib.h"
 
 // トランスフォームクラス
-class Transform
+class DXTransform
 {
 public:
 	// デフォルトコンストラクタ
-	Transform() = default;
+	DXTransform() = default;
 	// デストラクタ
-	~Transform();
+	~DXTransform();
 
 	// ワールド座標を設定
 	void Position(VECTOR position);
@@ -44,29 +44,21 @@ public:
 	// ローカルのスケール値を取得
 	VECTOR LocalScale() const;
 
-	// 前向き方向を設定
-	void Forward(VECTOR forward);
 	// 前向き方向を取得
 	VECTOR Forward() const;
-
-	// 右向き方向を設定
-	void Right(VECTOR right);
 	// 右向き方向を取得
 	VECTOR Right() const;
-
-	// 上向き方向を設定
-	void Up(VECTOR up);
 	// 上向き方向を取得
 	VECTOR Up() const;
 
 	
-	void LookAt(Transform target, VECTOR worldUp);
-	void LookAt(Transform target);
+	void LookAt(DXTransform target, VECTOR worldUp);
+	void LookAt(DXTransform target);
 	void LookAt(VECTOR worldPosition, VECTOR worldUp);
 	void LookAt(VECTOR worldPosition);
 
 	// 親の設定
-	void SetParent(Transform* parent, bool world_position_stays);
+	void SetParent(DXTransform* parent, bool world_position_stays);
 	// 親を削除
 	void detachParent();
 
@@ -85,10 +77,10 @@ private:
 	VECTOR local_scale{ 0.0f,0.0f,0.0f };
 
 	// 親クラス
-	Transform* parent = nullptr;
+	DXTransform* parent = nullptr;
 
 	// 子クラス
-	std::list<Transform*> childs;
+	std::list<DXTransform*> childs;
 };
 
 #endif // !TRANSFORM_H?
