@@ -134,7 +134,6 @@
     <ClCompile Include="Model.cpp" />
     <ClCompile Include="Quaternion.cpp" />
     <ClCompile Include="DXTransform.cpp" />
-    <ClCompile Include="Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
@@ -145,7 +144,6 @@
     <ClInclude Include="Screen.h" />
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="DXTransform.h" />
-    <ClInclude Include="Vector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

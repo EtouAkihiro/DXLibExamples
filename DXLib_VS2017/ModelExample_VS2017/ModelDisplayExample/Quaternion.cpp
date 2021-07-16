@@ -23,7 +23,7 @@ Quaternion operator*(Quaternion& lhs, Quaternion& rhs)
 		lhs.w * rhs.w - lhs.x * rhs.x - lhs.y * rhs.y - lhs.z * rhs.z);
 }
 
-Vector3 operator*(Quaternion rotation, Vector3 & point)
+VECTOR operator*(Quaternion rotation, VECTOR & point)
 {
 	float x = rotation.x * 2.0f;
 	float y = rotation.y * 2.0f;
@@ -38,7 +38,7 @@ Vector3 operator*(Quaternion rotation, Vector3 & point)
 	float wy = rotation.w * y;
 	float wz = rotation.w * z;
 
-	Vector3 Result;
+	VECTOR Result;
 	Result.x = (1.0f - (yy - zz)) * point.x + (xy - wz) * point.y + (xz + wy) * point.z;
 	Result.y = (xy + wy) * point.x + (1.0f - (xx + zz)) * point.y + (yz - wx) * point.z;
 	Result.z = (xz - wy) * point.x + (yz + wx) * point.y + (1.0f - (xx + yy)) * point.z;

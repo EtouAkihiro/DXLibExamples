@@ -2,7 +2,7 @@
 #define GAME_OBJECT_H_
 
 #include "DxLib.h"
-#include "Transform.h"
+#include "DXTransform.h"
 #include <string>
 
 // ゲームオブジェクトクラス（基底クラス）
@@ -38,7 +38,7 @@ protected:
 	// 名前
 	std::string m_Name;
 	// トランスフォーム
-	Transform m_Transform;
+	DXTransform m_Transform;
 	// 死亡フラグ
 	bool m_Dead{ false };
 };

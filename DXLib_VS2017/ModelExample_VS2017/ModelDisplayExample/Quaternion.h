@@ -1,7 +1,7 @@
 #ifndef QUATERNION_H_
 #define QUATERNION_H_
 
-#include "Vector3.h"
+#include "DxLib.h"
 
 // クォータ二オン
 struct Quaternion
@@ -26,6 +26,6 @@ struct Quaternion
 
 // 2項目演算子オーバーロード
 Quaternion operator*(Quaternion& lhs, Quaternion& rhs);
-Vector3 operator * (Quaternion rotation, Vector3& point);
+VECTOR operator * (Quaternion rotation, VECTOR& point);
 
 #endif // !QUATERNION_H_
