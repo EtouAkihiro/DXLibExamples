@@ -2,6 +2,7 @@
 #define GAME_OBJECT_H_
 
 #include "DxLib.h"
+#include "Transform.h"
 #include <string>
 
 // ゲームオブジェクトクラス（基底クラス）
@@ -36,12 +37,8 @@ protected:
 	std::string m_Tag;
 	// 名前
 	std::string m_Name;
-	// 位置
-	VECTOR m_Position;
-	// 回転
-	VECTOR m_Rotation;
-	// 大きさ
-	VECTOR m_Scale;
+	// トランスフォーム
+	Transform m_Transform;
 	// 死亡フラグ
 	bool m_Dead{ false };
 };

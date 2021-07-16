@@ -141,6 +141,7 @@
     <ClInclude Include="Model.h" />
     <ClInclude Include="Quaternion.h" />
     <ClInclude Include="Screen.h" />
+    <ClInclude Include="Singleton.h" />
     <ClInclude Include="Transform.h" />
     <ClInclude Include="Vector3.h" />
   </ItemGroup>

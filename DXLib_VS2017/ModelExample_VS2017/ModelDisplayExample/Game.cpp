@@ -16,6 +16,7 @@ void Game::Update()
 // ï`âÊ
 void Game::Draw()
 {
+	Model::Draw(Model::SimpleModel, VGet(0.0f, 0.0f, 0.0f), VGet(0.0f, 0.0f, 0.0f), VGet(1.0f, 1.0f, 1.0f));
 }
 
 // èIóπ
