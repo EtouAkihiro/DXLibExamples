@@ -32,6 +32,55 @@ Vector3 Vector3::Normalized() const
 	return { x / sqrt(x * x + y * y + z * z), y / sqrt(x * x + y * y + z * z), z / sqrt(x * x + y * y + z * z) };
 }
 
+// Vector3(0.0f,0.0f,0.0f)‚Æ“¯‚¶ˆÓ–¡
+Vector3 Vector3::Zero() const
+{
+	return Vector3(0.0f, 0.0f, 0.0f);
+}
+
+// Vector3(1.0f,1.0f,1.0f)‚Æ“¯‚¶ˆÓ–¡
+Vector3 Vector3::One() const 
+{
+	return Vector3(1.0f, 1.0f, 1.0f);
+}
+
+// Vector3(0.0f,1.0f,0.0f)‚Æ“¯‚¶ˆÓ–¡
+Vector3 Vector3::Up() const
+{
+	return Vector3(0.0f, 1.0f, 0.0f);
+}
+
+// Vector3(0.0f,-1.0f,0.0f)‚Æ“¯‚¶ˆÓ–¡
+Vector3 Vector3::Down() const
+{
+	return Vector3(0.0f, -1.0f, 0.0f);
+}
+
+// Vector3(-1.0f,0.0f,0.0f)‚Æ“¯‚¶ˆÓ–¡
+Vector3 Vector3::Left() const
+{
+	return Vector3(-1.0f, 0.0f, 0.0f);
+}
+
+// Vector3(1.0f,0.0f,0.0f)‚Æ“¯‚¶ˆÓ–¡
+Vector3 Vector3::Right() const
+{
+	return Vector3(1.0f, 0.0f, 0.0f);
+}
+
+// Vector3(0.0f,0.0f,1.0f)‚Æ“¯‚¶ˆÓ–¡
+Vector3 Vector3::Forward() const
+{
+	return Vector3(0.0f, 0.0f, 1.0f);
+}
+
+// Vector3(0.0f,0.0f,-1.0f)‚Æ“¯‚¶ˆÓ–¡
+Vector3 Vector3::Back() const
+{
+	return Vector3(0.0f, 0.0f, -1.0f);
+}
+
+
 // ‹tƒxƒNƒgƒ‹
 Vector3 operator-(const Vector3 & v)
 {

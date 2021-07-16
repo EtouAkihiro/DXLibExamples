@@ -20,11 +20,8 @@ struct Quaternion
 	// コンストラクタ
 	Quaternion(float x, float y, float z, float w);
 
-	// クォータニオンの初期化
-	Quaternion* QuaternionInit(Quaternion* pOut, float x, float y, float z, float w);
-
-private:
-	
+	// 2つのクォータニオンの内績
+	static float Dot(const Quaternion& lhs, const Quaternion& rhs);
 };
 
 // 2項目演算子オーバーロード

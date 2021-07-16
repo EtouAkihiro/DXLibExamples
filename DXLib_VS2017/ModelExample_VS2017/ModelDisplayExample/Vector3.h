@@ -23,6 +23,23 @@ struct Vector3
 	float Magnitude() const;
 	// 正規化したベクトルを返す
 	Vector3 Normalized() const;
+
+	// Vector3(0.0f,0.0f,0.0f)と同じ意味
+	Vector3 Zero() const;
+	// Vector3(1.0f,1.0f,1.0f)と同じ意味
+	Vector3 One() const;
+	// Vector3(0.0f,1.0f,0.0f)と同じ意味
+	Vector3 Up() const;
+	// Vector3(0.0f,-1.0f,0.0f)と同じ意味
+	Vector3 Down() const;
+	// Vector3(-1.0f,0.0f,0.0f)と同じ意味
+	Vector3 Left() const;
+	// Vector3(1.0f,0.0f,0.0f)と同じ意味
+	Vector3 Right() const;
+	// Vector3(0.0f,0.0f,1.0f)と同じ意味
+	Vector3 Forward() const;
+	// Vector3(0.0f,0.0f,-1.0f)と同じ意味
+	Vector3 Back() const;
 };
 
 // 単項演算子オーバーロード

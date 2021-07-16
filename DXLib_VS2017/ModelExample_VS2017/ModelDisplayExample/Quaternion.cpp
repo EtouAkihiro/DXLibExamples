@@ -1,10 +1,16 @@
 #include "Quaternion.h"
 
-float kEpsilon = 0.00001F;
+const float kEpsilon = 0.00001F;
 
 // コンストラクタ
 Quaternion::Quaternion(float x, float y, float z, float w) :
 	x{ x }, y{ y }, z{ z }, w{ w }{
+}
+
+// 2つのクォータニオンの内績
+float Quaternion::Dot(const Quaternion & lhs, const Quaternion & rhs)
+{
+	return lhs.x * rhs.x + lhs.y * rhs.y + lhs.z * rhs.z + lhs.w * rhs.w;
 }
 
 // 回転を組み合わせる
@@ -19,5 +25,23 @@ Quaternion operator*(Quaternion& lhs, Quaternion& rhs)
 
 Vector3 operator*(Quaternion rotation, Vector3 & point)
 {
-	return Vector3();
+	float x = rotation.x * 2.0f;
+	float y = rotation.y * 2.0f;
+	float z = rotation.z * 2.0f;
+	float xx = rotation.x * x;
+	float yy = rotation.y * y;
+	float zz = rotation.z * z;
+	float xy = rotation.x * y;
+	float xz = rotation.x * z;
+	float yz = rotation.y * z;
+	float wx = rotation.w * x;
+	float wy = rotation.w * y;
+	float wz = rotation.w * z;
+
+	Vector3 Result;
+	Result.x = (1.0f - (yy - zz)) * point.x + (xy - wz) * point.y + (xz + wy) * point.z;
+	Result.y = (xy + wy) * point.x + (1.0f - (xx + zz)) * point.y + (yz - wx) * point.z;
+	Result.z = (xz - wy) * point.x + (yz + wx) * point.y + (1.0f - (xx + yy)) * point.z;
+
+	return Result;
 }
