@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{19340145-7459-45d7-b488-18976a64911c}</ProjectGuid>
-    <RootNamespace>ModelDisplayExample</RootNamespace>
+    <ProjectGuid>{da58329c-039f-4dde-a02a-90c24a9cb608}</ProjectGuid>
+    <RootNamespace>ModelDisPlayExample</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,15 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DXTransform.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Model.cpp" />
     <ClCompile Include="Quaternion.cpp" />
-    <ClCompile Include="DXTransform.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DXTransform.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Input.h" />
@@ -143,7 +144,6 @@
     <ClInclude Include="Quaternion.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="Singleton.h" />
-    <ClInclude Include="DXTransform.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
