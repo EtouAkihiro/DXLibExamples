@@ -19,4 +19,4 @@ public:
 	void End();
 };
 
-#endif // !GAME_H?
+#endif // !GAME_H

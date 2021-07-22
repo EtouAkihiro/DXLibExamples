@@ -7,7 +7,7 @@ int Model::SimpleModel{ -1 };
 // ƒ‚ƒfƒ‹‚Ì“Ç‚İ‚İ
 void Model::Load()
 {
-	SimpleModel = MV1LoadModel("Model/Robot Kyle.mv1");
+	SimpleModel = MV1LoadModel("Models/Robot Kyle.mv1");
 }
 
 // •`‰æ
