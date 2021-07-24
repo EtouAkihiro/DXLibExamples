@@ -12,9 +12,9 @@ public:
 	// 読み込み
 	static void Load();
 	// 描画（Vector版）
-	static void Draw(int model, VECTOR position, VECTOR rotation, VECTOR scale);
+	static void Draw(int& model, VECTOR& position, VECTOR& rotation, VECTOR& scale);
 	// 描画（Transform版）
-	static void Draw(int model, DXTransform transform);
+	static void Draw(int& model, DXTransform& transform);
 
 public:
 	// シンプルモデル

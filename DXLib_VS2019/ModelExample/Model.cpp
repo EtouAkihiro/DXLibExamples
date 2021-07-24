@@ -14,7 +14,7 @@ void Model::Load()
 }
 
 // 描画（Vector版）
-void Model::Draw(int model, VECTOR position, VECTOR rotation, VECTOR scale)
+void Model::Draw(int& model, VECTOR& position, VECTOR& rotation, VECTOR& scale)
 {
 	// モデルの座標を設定
 	MV1SetPosition(model,position);
@@ -27,7 +27,7 @@ void Model::Draw(int model, VECTOR position, VECTOR rotation, VECTOR scale)
 }
 
 // 描画（Transform版）
-void Model::Draw(int model, DXTransform transform)
+void Model::Draw(int& model, DXTransform& transform)
 {
 	// モデルの座標を設定
 	MV1SetPosition(model, transform.Position());
