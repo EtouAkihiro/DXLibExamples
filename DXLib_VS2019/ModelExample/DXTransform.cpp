@@ -93,20 +93,13 @@ VECTOR DXTransform::Up() const
 	return VECTOR();
 }
 
-void DXTransform::LookAt(DXTransform target, VECTOR worldUp)
+void DXTransform::LookAt(VECTOR& target)
 {
-}
+	VECTOR subVector = (m_Position, target);
 
-void DXTransform::LookAt(DXTransform target)
-{
-}
+	float angle = atan2(subVector.x, subVector.z);
 
-void DXTransform::LookAt(VECTOR worldPosition, VECTOR worldUp)
-{
-}
-
-void DXTransform::LookAt(VECTOR worldPosition)
-{
+	m_Rotation.y += angle + DX_PI_F;
 }
 
 // êeÇÃê›íË

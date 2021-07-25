@@ -51,11 +51,8 @@ public:
 	// ãŒü‚«•ûŒü‚ğæ“¾
 	VECTOR Up() const;
 
-	
-	void LookAt(DXTransform target, VECTOR worldUp);
-	void LookAt(DXTransform target);
-	void LookAt(VECTOR worldPosition, VECTOR worldUp);
-	void LookAt(VECTOR worldPosition);
+	// ‚¨‚µLookat
+	void LookAt(VECTOR& target);
 
 	// e‚Ìİ’è
 	void SetParent(DXTransform* parent, bool world_position_stays);
